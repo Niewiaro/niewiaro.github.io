@@ -1,16 +1,75 @@
-# Vue 3 + Vite + Vuex
+# Nuxt Minimal Starter
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Vue-3.0-green.svg" alt="Vue 3"/>
-  <img src="https://img.shields.io/badge/Vite-2.0-blue.svg" alt="Vite"/>
-  <img src="https://img.shields.io/badge/Vuex-4.0-brightgreen.svg" alt="Vuex"/>
-</p>
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-<p align="center">
-  <img src="https://vuejs.org/images/logo.png" alt="Vue logo" width="100"/>
-  <img src="https://vitejs.dev/logo.svg" alt="Vite logo" width="100"/>
-  <img src="https://vuex.vuejs.org/logo.png" alt="Vuex logo" width="100"/>
-</p>
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Setup
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Make sure to install dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

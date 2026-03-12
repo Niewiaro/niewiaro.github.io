@@ -1,22 +1,17 @@
 {
-  "name": "niewiaro-github-io",
-  "private": true,
-  "version": "0.0.0",
+  "name": "Niewiaro-github-io",
   "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "vue": "^3.4.29",
-    "vue-router": "^4.4.0",
-    "vuex": "^4.0.2"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
-    "sass": "^1.77.6",
-    "vite": "^5.3.1"
+    "nuxt": "^4.4.2",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.3"
   }
 }
