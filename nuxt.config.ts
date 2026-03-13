@@ -3,6 +3,15 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/eslint"],
 	devtools: { enabled: true },
 	css: ["~/assets/css/main.css"],
+	runtimeConfig: {
+		public: {
+			appName: "Niewiaro",
+			environment: "dev",
+			appURL: "https://niewiaro.github.io",
+			gitURL: "https://github.com/Niewiaro",
+			gitRepoURL: "https://github.com/Niewiaro/niewiaro.github.io",
+		},
+	},
 	compatibilityDate: "2025-07-15",
 	eslint: {
 		config: {
