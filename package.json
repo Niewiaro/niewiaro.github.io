@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/ui": "^4.5.1",
@@ -21,6 +23,7 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "esbuild",
+      "unrs-resolver",
       "vue-demi"
     ],
     "overrides": {
@@ -31,5 +34,10 @@
         "vue-router": "5"
       }
     }
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "1.15.2",
+    "eslint": "^10.0.3",
+    "typescript": "^5.9.3"
   }
 }
