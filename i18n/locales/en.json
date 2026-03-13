@@ -1,9 +1,7 @@
 {
-    "en": {
-        "seo": {
-            "title": "Python, Fullstack & Embedded Dev",
-            "description": "I build Python automation, modern web applications (Python, Vue/Nuxt) and embedded systems."
-        }
+    "seo": {
+        "title": "Python, Fullstack & Embedded Dev",
+        "description": "I build Python automation, modern web applications (Python, Vue/Nuxt) and embedded systems."
     },
     "hello-world": "Hello World!"
 }
