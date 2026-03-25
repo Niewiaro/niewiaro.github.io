@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const config = useRuntimeConfig();
 const i18nHead = useLocaleHead({
 	seo: true,
 });
@@ -26,10 +27,10 @@ useSchemaOrg([
 	definePerson({
 		name: "Jakub Niewiarowski",
 		jobTitle: "Python, Fullstack & Embedded Developer",
-		url: "https://niewiaro.github.io",
+		url: config.public.appURL,
 		sameAs: [
-			"https://github.com/Niewiaro",
-			"https://www.linkedin.com/in/jakub-niewiarowski/",
+			config.public.gitURL,
+			config.public.linkedInURL,
 		],
 	}),
 ]);
