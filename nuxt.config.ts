@@ -9,6 +9,7 @@ export default defineNuxtConfig({
 		description: "Python, Fullstack & Embedded Developer Portfolio",
 		defaultLocale: "pl",
 		indexable: true,
+		trailingSlash: true,
 	},
 	runtimeConfig: {
 		public: {
