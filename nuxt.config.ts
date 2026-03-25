@@ -3,7 +3,13 @@ const appUrl = "https://niewiaro.github.io";
 const gitProfileUrl = "https://github.com/Niewiaro";
 
 export default defineNuxtConfig({
-	modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/eslint", "@nuxtjs/seo"],
+	modules: [
+		"@nuxt/ui",
+		"@nuxtjs/i18n",
+		"@nuxt/eslint",
+		"@nuxtjs/seo",
+		"@nuxt/fonts",
+	],
 	devtools: { enabled: true },
 	css: ["~/assets/css/main.css"],
 	site: {
@@ -34,6 +40,11 @@ export default defineNuxtConfig({
 				indent: "tab",
 			},
 		},
+	},
+	fonts: {
+		families: [
+			{ name: "Inter", weights: [400, 700], global: true },
+		],
 	},
 	i18n: {
 		baseUrl: appUrl,

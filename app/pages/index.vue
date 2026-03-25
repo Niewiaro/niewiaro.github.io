@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const config = useRuntimeConfig();
 const { t, locales, setLocale } = useI18n();
 
 useSeoMeta({
@@ -10,10 +11,10 @@ useSeoMeta({
 	themeColor: "#121212",
 });
 
-defineOgImageComponent("NuxtSeo", {
+defineOgImage("Nuxt.satori", {
+	headline: config.public.appName,
 	title: () => t("seo.title"),
 	description: () => t("seo.description"),
-	theme: "#3b82f6",
 	colorMode: "dark",
 });
 </script>
