@@ -1,11 +1,14 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+const appName = "Niewiaro";
+const appUrl = "https://niewiaro.github.io";
+const gitProfileUrl = "https://github.com/Niewiaro";
+
 export default defineNuxtConfig({
 	modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/eslint", "@nuxtjs/seo"],
 	devtools: { enabled: true },
 	css: ["~/assets/css/main.css"],
 	site: {
-		url: "https://niewiaro.github.io",
-		name: "Niewiaro",
+		url: appUrl,
+		name: appName,
 		description: "Python, Fullstack & Embedded Developer Portfolio",
 		defaultLocale: "pl",
 		indexable: true,
@@ -13,11 +16,12 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
-			appName: "Niewiaro",
+			appName: appName,
 			environment: "prod",
-			appURL: "https://niewiaro.github.io",
-			gitURL: "https://github.com/Niewiaro",
-			gitRepoURL: "https://github.com/Niewiaro/niewiaro.github.io",
+			appURL: appUrl,
+			gitURL: gitProfileUrl,
+			gitRepoURL: `${gitProfileUrl}/niewiaro.github.io`,
+			linkedInURL: "https://www.linkedin.com/in/jakub-niewiarowski/",
 		},
 	},
 	compatibilityDate: "2025-07-15",
@@ -32,7 +36,7 @@ export default defineNuxtConfig({
 		},
 	},
 	i18n: {
-		baseUrl: "https://niewiaro.github.io",
+		baseUrl: appUrl,
 		locales: [
 			{ code: "pl", iso: "pl-PL", name: "Polski", file: "pl.json" },
 			{ code: "en", iso: "en-US", name: "English", file: "en.json" },
