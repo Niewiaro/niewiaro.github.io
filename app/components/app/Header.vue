@@ -1,11 +1,15 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
+const localePath = useLocalePath();
 </script>
 
 <template>
 	<UHeader>
-		<template #title>
-			<div class="flex items-center">
+		<template #left>
+			<NuxtLink
+				:to="localePath('/')"
+				class="flex items-center"
+			>
 				<UAvatar
 					src="/favicon.svg"
 					:alt="config.public.appName + ' Logo'"
@@ -13,7 +17,7 @@ const config = useRuntimeConfig();
 					class="mr-2"
 				/>
 				<span class="font-bold text-lg">{{ config.public.appName }}</span>
-			</div>
+			</NuxtLink>
 		</template>
 
 		<template #right>
