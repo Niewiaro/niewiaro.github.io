@@ -59,7 +59,7 @@ const logoStrokeHighlight = computed(() => isDark.value ? "white" : "#059669");
 			</defs>
 		</svg>
 
-		<div class="max-w-[750px] pl-6 lg:pl-[80px]">
+		<div class="max-w-187.5 pl-6 lg:pl-20">
 			<p
 				v-if="headline"
 				class="uppercase text-[24px] text-[#00DC82] mb-4 font-bold "
@@ -81,7 +81,7 @@ const logoStrokeHighlight = computed(() => isDark.value ? "white" : "#059669");
 			</p>
 		</div>
 		<svg
-			class="absolute top-[160px] right-[90px] hidden lg:flex"
+			class="absolute top-40 right-22.5 hidden lg:flex"
 			width="340"
 			height="340"
 			viewBox="0 0 340 340"
