@@ -12,13 +12,13 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/ui": "^4.5.1",
-    "@nuxtjs/i18n": "^10.2.3",
-    "@nuxtjs/seo": "3.4.0",
+    "@nuxt/ui": "^4.6.0",
+    "@nuxtjs/i18n": "^10.2.4",
+    "@nuxtjs/seo": "4.0.2",
     "nuxt": "^4.4.2",
-    "tailwindcss": "^4.2.1",
-    "vue": "^3.5.30",
-    "vue-router": "^5.0.3"
+    "tailwindcss": "^4.2.2",
+    "vue": "^3.5.31",
+    "vue-router": "^5.0.4"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "1.15.2",
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "typescript": "^5.9.3"
   }
 }
