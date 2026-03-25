@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			appName: appName,
+			author: "Jakub Niewiarowski",
 			environment: "prod",
 			appURL: appUrl,
 			gitURL: gitProfileUrl,

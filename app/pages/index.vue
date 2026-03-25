@@ -7,7 +7,7 @@ useSeoMeta({
 	description: () => t("seo.description"),
 	ogTitle: () => t("seo.title"),
 	ogDescription: () => t("seo.description"),
-	author: "Jakub Niewiarowski",
+	author: config.public.author,
 	themeColor: "#121212",
 });
 
