@@ -6,6 +6,8 @@ useSeoMeta({
 	description: () => t("seo.description"),
 	ogTitle: () => t("seo.title"),
 	ogDescription: () => t("seo.description"),
+	author: "Jakub Niewiarowski",
+	themeColor: "#121212",
 });
 
 defineOgImageComponent("NuxtSeo", {

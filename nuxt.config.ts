@@ -8,11 +8,12 @@ export default defineNuxtConfig({
 		name: "Niewiaro",
 		description: "Python, Fullstack & Embedded Developer Portfolio",
 		defaultLocale: "pl",
+		indexable: true,
 	},
 	runtimeConfig: {
 		public: {
 			appName: "Niewiaro",
-			environment: "dev",
+			environment: "prod",
 			appURL: "https://niewiaro.github.io",
 			gitURL: "https://github.com/Niewiaro",
 			gitRepoURL: "https://github.com/Niewiaro/niewiaro.github.io",

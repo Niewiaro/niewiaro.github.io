@@ -1,22 +1,38 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const i18nHead = useLocaleHead({
+	seo: true,
+});
 
-useHead({
+useHead(() => ({
 	htmlAttrs: {
-		lang: locale,
+		lang: i18nHead.value.htmlAttrs!.lang,
 	},
 	link: [
-		{ rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96" },
-		{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-		{ rel: "shortcut icon", href: "/favicon.ico" },
-		{ rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+		...(i18nHead.value.link || []),
 		{ rel: "manifest", href: "/site.webmanifest" },
 	],
-});
+	meta: [...(i18nHead.value.meta || [])],
+}));
 
 useSeoMeta({
 	titleTemplate: "%s | Niewiaro",
 });
+
+useSchemaOrg([
+	defineWebSite({
+		name: "Niewiaro Portfolio",
+	}),
+	defineWebPage(),
+	definePerson({
+		name: "Jakub Niewiarowski",
+		jobTitle: "Python, Fullstack & Embedded Developer",
+		url: "https://niewiaro.github.io",
+		sameAs: [
+			"https://github.com/Niewiaro",
+			"https://www.linkedin.com/in/jakub-niewiarowski/",
+		],
+	}),
+]);
 </script>
 
 <template>
