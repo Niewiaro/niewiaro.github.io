@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, DropdownMenuItem } from "@nuxt/ui";
+import type { NavigationMenuItem } from "@nuxt/ui";
 
 const config = useRuntimeConfig();
 const localePath = useLocalePath();
@@ -13,14 +13,6 @@ const items = computed<NavigationMenuItem[]>(() => [{
 	to: "https://helloworld.niewiaro.cc/",
 	target: "_blank",
 }]);
-
-const languageItems = computed<DropdownMenuItem[]>(() =>
-	locales.value.map(l => ({
-		label: l.name,
-		to: switchLocalePath(l.code),
-		slot: l.code,
-	})),
-);
 </script>
 
 <template>
@@ -43,13 +35,7 @@ const languageItems = computed<DropdownMenuItem[]>(() =>
 		<UNavigationMenu :items="items" />
 
 		<template #right>
-			<UDropdownMenu
-				:items="languageItems"
-				:content="{
-					align: 'end',
-					side: 'bottom',
-				}"
-			>
+			<UDrawer>
 				<UButton
 					icon="i-lucide-languages"
 					color="neutral"
@@ -57,18 +43,33 @@ const languageItems = computed<DropdownMenuItem[]>(() =>
 					:aria-label="t('i18n.selectLanguage')"
 				/>
 
-				<template
-					v-for="l in locales"
-					:key="l.code"
-					#[`${l.code}-trailing`]
-				>
-					<UIcon
-						v-if="l.code === locale"
-						name="i-lucide-check"
-						class="shrink-0 size-5 text-primary"
-					/>
+				<template #content>
+					<div class="p-6 flex flex-col gap-2 max-w-4xl mx-auto w-full">
+						<h3 class="text-lg font-semibold mb-4 text-center">
+							{{ t('i18n.selectLanguage') }}
+						</h3>
+
+						<UButton
+							v-for="l in locales"
+							:key="l.code"
+							:label="l.name"
+							:to="switchLocalePath(l.code)"
+							color="neutral"
+							:variant="l.code === locale ? 'soft' : 'ghost'"
+							size="xl"
+							class="justify-between"
+						>
+							<template #trailing>
+								<UIcon
+									v-if="l.code === locale"
+									name="i-lucide-check"
+									class="shrink-0 size-5 text-primary"
+								/>
+							</template>
+						</UButton>
+					</div>
 				</template>
-			</UDropdownMenu>
+			</UDrawer>
 
 			<UColorModeButton />
 		</template>
