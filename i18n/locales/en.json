@@ -3,5 +3,8 @@
         "title": "Python, Fullstack & Embedded Dev",
         "description": "I build Python automation, modern web applications (Python, Vue/Nuxt) and embedded systems."
     },
+    "i18n": {
+        "selectLanguage": "Select language"
+    },
     "hello-world": "Hello World!"
 }
