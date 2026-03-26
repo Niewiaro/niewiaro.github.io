@@ -24,7 +24,7 @@ const languageItems = computed<DropdownMenuItem[]>(() =>
 </script>
 
 <template>
-	<UHeader>
+	<UHeader mode="drawer">
 		<template #left>
 			<NuxtLink
 				:to="localePath('/')"
@@ -71,6 +71,14 @@ const languageItems = computed<DropdownMenuItem[]>(() =>
 			</UDropdownMenu>
 
 			<UColorModeButton />
+		</template>
+
+		<template #body>
+			<UNavigationMenu
+				:items="items"
+				orientation="vertical"
+				class="-mx-2.5"
+			/>
 		</template>
 	</UHeader>
 </template>
