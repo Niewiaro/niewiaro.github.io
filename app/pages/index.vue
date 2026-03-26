@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
-const { t, locales, setLocale } = useI18n();
+const { t } = useI18n();
 
 useSeoMeta({
 	title: () => t("seo.title"),
@@ -20,16 +20,11 @@ defineOgImage("Nuxt.satori", {
 </script>
 
 <template>
-	<div>
-		<div>
-			<UButton
-				v-for="locale in locales"
-				:key="locale.code"
-				@click="setLocale(locale.code)"
-			>
-				{{ locale.name }}
-			</UButton>
-		</div>
-		<h1>{{ $t('hello-world') }}</h1>
-	</div>
+	<UPage>
+		<UPageHero
+			:title="t('seo.title')"
+			:description="t('seo.description')"
+			:headline="t('homepage.welcome')"
+		/>
+	</UPage>
 </template>

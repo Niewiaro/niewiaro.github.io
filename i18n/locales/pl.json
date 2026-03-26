@@ -6,5 +6,8 @@
     "i18n": {
       "selectLanguage": "Wybierz język"
     },
-    "hello-world": "Witaj Świecie!"
+    "hello-world": "Witaj Świecie!",
+    "homepage": {
+      "welcome": "Witaj w moim portfolio"
+    }
 }
